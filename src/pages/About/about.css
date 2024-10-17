@@ -1,0 +1,132 @@
+.about-container {
+    position: absolute;
+    top: 10%;
+    left: 65%;
+    right: 20%;
+    width: 30vw;
+    height:80vh;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px; /* Add some padding for spacing */
+    box-sizing: border-box; /* Ensure padding is included in height/width */
+    opacity: 0.8;
+    overflow: hidden;
+}
+
+.card {
+    width: fit-content;
+    max-width: 400px;
+    height:fit-content;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Center content horizontally */
+    background: rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    border-radius: 2em;
+    margin: 10px; 
+    padding: 20px; 
+    box-sizing: border-box; 
+}
+.card > h1{
+    margin: 5px;
+}
+.card > img {
+    width: 12vh;
+    height: 12vh;
+    border-radius: 40%;
+}
+
+.card > p {
+     /* Center align the text */
+    margin: 0;
+    padding: 0 10px; 
+    word-wrap: break-word; 
+    flex-shrink: 1;
+}
+.download-resume{
+    width:8vw;
+    height: 5vh;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2em;
+    position: relative;
+    margin: 10px; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.picons{
+    width:8vw;
+    height: 5vh;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2em;
+    position: relative;
+    margin: 10px; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 25vh;
+    bottom: 8vh;
+    gap: 3vh;
+}
+.picons a{
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 25%;
+}
+.picons a:hover{
+    background: #4caf50;
+    cursor: pointer;
+}
+.scroll {
+    background: transparent;
+    height: 5vh;
+    width: fit-content;
+    position: relative;
+    top: 2vh;
+    right: 5vw;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap; /* Ensure items don't wrap */
+}
+
+.scroll div {
+    display: flex; /* Flex container to align spans in a row */
+    animation: animate 15s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(100); /* Start at normal position */
+    }
+    100% {
+        transform: translateX(-100%); /* Move exactly one container width */
+    }
+}
+
+.scroll div span {
+    display: inline-flex;
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.scroll div span:hover {
+    background: #4caf50;
+    cursor: pointer;
+}

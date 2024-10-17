@@ -1,0 +1,157 @@
+.navbar {
+height: 50vh;  
+    width: 27vw; 
+    max-width: 1200px;
+    min-width: 300px;
+    position: absolute;
+    top: 20%;   
+    left: 15%;  
+    border-radius: 60%;
+    background: linear-gradient(45deg, #8460ed, #f35b24);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(-100%) translateZ(-500px); 
+    animation: slide-in 1s forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: top 0.5s ease-out, left 0.5s ease-in; /* Add transition for smooth movement */
+    z-index: 10;
+}
+
+.navbar li {
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 0;
+    transform: rotate(calc(72deg * var(--i))) translate(400px); /* Increased radius */
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.navbar .selected{
+    background: rgba(255, 255, 255, 0.4); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 2); 
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.navbar li a {
+    font-size: 7rem; /* Increased font size */
+    color: #fff; /* Change to white or any desired color */
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px; /* Increased width for larger icons */
+    height: 120px; /* Increased height for larger icons */
+    background: rgba(255, 255, 255, 0.2); /* Translucent background */
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5); /* Glow effect */
+    transition: 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.navbar li a:hover {
+    background: rgba(255, 255, 255, 0.4); 
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    transform: scale(1.2); 
+}
+
+.navbar li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: pulse 2s infinite;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+}
+
+.navbar li a:hover::before {
+    opacity: 1; 
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.4;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+}
+
+.toggle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    z-index: 10000;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: transform 1.25s;
+}
+
+
+.navbar.active .toggle {
+    transform: rotate(315deg);
+}
+
+.navbar.active li {
+    opacity: 1;
+    transform: rotate(calc(72deg * var(--i))) translate(500px); /* Increased radius */
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0; 
+        transform: translateY(-100%) translateZ(-500px); 
+    }
+    100% {
+        opacity: 0.8;
+        transform: translateY(0) translateZ(0) scale(0.3);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        height: 12vh;
+        width: 100vw;
+        max-width: none;
+        top: 10%;
+        font-size: 0.9rem;
+    }
+
+    .navbar li {
+        transform-origin: 0 0;
+        transform: rotate(calc(72deg * var(--i))) translate(200px); /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        height: 15vh;
+        width: 100vw;
+        top: 10%;
+        font-size: 0.8rem;
+    }
+
+    .navbar li {
+        transform-origin: 0 0;
+        transform: rotate(calc(72deg * var(--i))) translate(150px); /* Adjust for very small screens */
+    }
+}

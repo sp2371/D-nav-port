@@ -1,0 +1,90 @@
+.contact-container{
+    position: absolute;
+    top: 10%;
+    left: 65%;
+    right: 20%;
+    width: 30vw;
+    height:80vh;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    padding: 20px; /* Add some padding for spacing */
+    box-sizing: border-box; /* Ensure padding is included in height/width */
+    opacity: 0.8;
+    overflow: hidden;
+}
+.contact-container h2{
+    width:13vw;
+    height: 7vh;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2em;
+    color: #fff;
+    position: relative;
+    left: -1vw;
+    margin: 10px; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-container h2:hover{
+    background: #4caf50;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+.form{
+    position: relative;
+    left: 6vw;
+    top: 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+#if {
+    width:13vw;
+    height: 7vh;
+    border: none;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 2em;
+    position: relative;
+    margin: 10px; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+#submit{
+    width:6vw !important;
+    height: 5vh !important;
+    width:13vw;
+    height: 7vh;
+    border: none;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2em;
+    box-shadow: inset 0 0 0 0 #000AD2;
+    position: relative;
+    top: 4vh;
+    left: 4vw;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+#submit:hover{
+    background:#4caf50;
+    cursor: pointer;
+    border: 1px solid white;
+    box-shadow: inset 100px 0 0 0 #000AD2;
+}

@@ -1,0 +1,35 @@
+.bubble-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #000AD2; /* Dark blue color */
+  opacity: 0.8; /* Reduces intensity of the color */
+  backdrop-filter: blur(10px) brightness(0.8); /* Applies a soft blur and slightly reduces brightness */
+  z-index: -3000; /* Keeps it behind other elements */
+}
+
+/* Adjust the light element to have softer blur and less brightness */
+.light {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2); /* Slightly lower opacity */
+  box-shadow: 0 0 150px 80px rgba(255, 255, 255, 0.4); /* Softer glow effect */
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* Bubble style with reduced brightness and softer shadows */
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 182, 193, 0.4); /* Lighter pink with lower opacity */
+  box-shadow: 0 0 8px rgba(255, 182, 193, 0.3); /* Softer shadow */
+}
+
+.bubble.alt {
+  background: rgba(135, 206, 235, 0.4); /* Lighter sky blue with lower opacity */
+  box-shadow: 0 0 8px rgba(135, 206, 235, 0.3); /* Softer shadow */
+}
+

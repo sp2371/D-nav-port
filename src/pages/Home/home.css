@@ -1,0 +1,43 @@
+.home-container{
+    position:absolute;
+    top:25%;
+    left: 35%;
+    width: 50vw;
+    height: 50vh;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100000000;
+}
+.home-container h2 {
+    color: white;
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid white; /* Creates the blinking cursor effect */
+    width: 0;
+    animation: typewriter 1.2s steps(15) 1s 1 normal both, 
+               blink 0.75s step-end infinite 2s;
+    display: inline-block; /* Ensures the background width matches the content */
+}
+
+@keyframes typewriter {
+    from { 
+        width: 0;
+    }
+    to { 
+        width:15ch; /* Adjusted to fully reveal the text */
+    }
+}
+
+@keyframes blink {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white;
+    }
+}
