@@ -27,9 +27,7 @@ function Projects() {
                 </ul>
                 <Modal isOpen={isModalOpen} onClose={closeModal}>
                     <video width="500" autoPlay style={{
-                        opacity: isModalOpen ? 1 : 0,
-                        transform: isModalOpen ? 'scale(1)' : 'scale(0.95)',
-                        transition: 'opacity 0.5s ease, transform 0.5s ease',
+                        transition: 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out',
                         filter: 'brightness(1.5)',
                     }} muted onClick={redirectPage}>
                         <source src={portfolio1} type="video/mp4" />
