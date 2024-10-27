@@ -52,8 +52,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 1;
+    animation: motion 2s infinite;
+}
+@keyframes motion {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 .project-container li:hover{
     color: black;
     background: rgba(255, 255, 255, 0.3); 
+    border: 1px solid white;
 }
