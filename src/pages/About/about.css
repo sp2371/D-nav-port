@@ -3,7 +3,7 @@
     top: 10%;
     left: 65%;
     right: 20%;
-    width: 30vw;
+    width: 30vw !important; 
     height:80vh;
     background: transparent;
     border: 1px solid white;
@@ -18,17 +18,17 @@
 
 .card {
     width: fit-content;
-    max-width: 400px;
-    height:fit-content;
+    max-width: 40vw;
+    height: fit-content;
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Center content horizontally */
+    flex-direction: column;
+    align-items: flex-start;
     background: rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
     border-radius: 2em;
-    margin: 10px; 
-    padding: 20px; 
-    box-sizing: border-box; 
+    margin: 1vw;
+    padding: 1vw;
+    box-sizing: border-box;
 }
 .card > h1{
     margin: 5px;
@@ -51,7 +51,6 @@
     height: 5vh;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 2em;
-    position: relative;
     margin: 10px; 
     padding: 20px; 
     box-sizing: border-box; 
@@ -59,20 +58,22 @@
     justify-content: center;
     align-items: center;
 }
+.icons-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
 .picons{
     width:8vw;
     height: 5vh;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 2em;
-    position: relative;
     margin: 10px; 
     padding: 20px; 
     box-sizing: border-box; 
     display: flex;
     justify-content: center;
     align-items: center;
-    left: 25vh;
-    bottom: 8vh;
     gap: 3vh;
 }
 .picons a{
@@ -96,7 +97,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    /* overflow: hidden; */
     white-space: nowrap; /* Ensure items don't wrap */
 }
 

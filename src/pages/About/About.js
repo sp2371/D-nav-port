@@ -15,40 +15,40 @@ const About = () => {
           elegant design, I strive to bring ideas to life through code.
         </p>
       </div>
-      <div>
+      <div className="icons-container">
         <div className="download-resume">
           <ion-icon name="download-outline"></ion-icon>
           resume
         </div>
         <div className="picons">
-          <a  target='_blank' rel='noreferrer' href='https://github.com/sp2371'>
+          <a target='_blank' rel='noreferrer' href='https://github.com/sp2371'>
             <ion-icon name="logo-github"></ion-icon>
           </a>
-          <a  target='_blank' rel='noreferrer' href='https://www.linkedin.com/in/swayamprakash-busam-87a618216?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'>
+          <a target='_blank' rel='noreferrer' href='https://www.linkedin.com/in/swayamprakash-busam-87a618216?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'>
             <ion-icon name="logo-linkedin"></ion-icon>
           </a>
         </div>
+      </div>
 
-
-        <div className="scroll">
-          <div>
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JS</span>
-            <span>REACT</span>
-            <span>SCSS</span>
-            <span>GIT</span>
-          </div>
-          <div>
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JS</span>
-            <span>REACT</span>
-            <span>SCSS</span>
-            <span>GIT</span>
-          </div>
+      <div className="scroll">
+        <div>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JS</span>
+          <span>REACT</span>
+          <span>SCSS</span>
+          <span>GIT</span>
+        </div>
+        <div>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JS</span>
+          <span>REACT</span>
+          <span>SCSS</span>
+          <span>GIT</span>
         </div>
       </div>
+
     </div>
   );
 };

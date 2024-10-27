@@ -26,7 +26,7 @@ height: 50vh;
     top: 50%;
     left: 50%;
     transform-origin: 0 0;
-    transform: rotate(calc(72deg * var(--i))) translate(400px); /* Increased radius */
+    transform: rotate(calc(72deg * var(--i))) translate(60vw); /* Increased radius */
     opacity: 0;
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
@@ -43,9 +43,9 @@ height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 120px; /* Increased width for larger icons */
-    height: 120px; /* Increased height for larger icons */
     background: rgba(255, 255, 255, 0.2); /* Translucent background */
+    width: 7rem;
+    height: 7rem;
     border-radius: 50%;
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5); /* Glow effect */
     transition: 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
